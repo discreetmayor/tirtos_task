@@ -2,7 +2,7 @@
  * Task.h
  *
  *  Created on: Nov 17, 2018
- *      Author: discreetmayor
+ *      Author: mh
  */
 
 #ifndef PHOSPHORBOARD_TASKS_TASK_H_
@@ -12,7 +12,7 @@
 #include <ti/sysbios/BIOS.h>
 
 extern "C" {
-  void taskFxn(UArg arg0, UArg arg1);
+  void abstractTaskFxn(UArg arg0, UArg arg1);
 }
 
 class Task

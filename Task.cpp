@@ -24,11 +24,11 @@ void Task::create(int priority, int stackSize, UArg arg) {
     taskParams.stackSize = stackSize;
     taskParams.arg0 = (UArg)this;
     taskParams.arg1 = arg;
-    Task_create((Task_FuncPtr)taskFxn, &taskParams, NULL);
+    Task_create((Task_FuncPtr)abstractTaskFxn, &taskParams, NULL);
 }
 
 extern "C" {
-    void taskFxn(UArg arg0, UArg arg1) {
+    void abstractTaskFxn(UArg arg0, UArg arg1) {
         Task *task = reinterpret_cast<Task*>(arg0);
         if(task) {
             task->run(arg1);
