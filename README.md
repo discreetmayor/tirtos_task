@@ -19,7 +19,7 @@ void MyTask::run(UArg arg) {
 }
 ```
 
-3. Instanciate and create your task
+3. Instantiate and create your task
 
 ```cpp
 #define TASK_PRIORITY 1
