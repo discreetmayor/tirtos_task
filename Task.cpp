@@ -7,12 +7,6 @@
 
 #include <Task.h>
 
-Task::Task() {
-}
-
-Task::~Task() {
-}
-
 void Task::create(int priority, int stackSize) {
     create(priority, stackSize, NULL);
 }

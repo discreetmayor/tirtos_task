@@ -15,11 +15,10 @@ extern "C" {
   void abstractTaskFxn(UArg arg0, UArg arg1);
 }
 
-class Task
-{
+class Task {
 public:
-    Task();
-    virtual ~Task() = 0;
+    Task() {};
+    virtual ~Task() {};
     virtual void run(UArg arg) = 0;
     void create(int priority, int stackSize);
     void create(int priority, int stackSize, UArg arg);
