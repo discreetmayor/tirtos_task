@@ -5,8 +5,8 @@
  *      Author: mh
  */
 
-#ifndef PHOSPHORBOARD_TASKS_TASK_H_
-#define PHOSPHORBOARD_TASKS_TASK_H_
+#ifndef TIRTOS_TASK_H_
+#define TIRTOS_TASK_H_
 
 #include <ti/sysbios/knl/Task.h>
 #include <ti/sysbios/BIOS.h>
@@ -24,4 +24,4 @@ public:
     void create(int priority, int stackSize, UArg arg);
 };
 
-#endif /* PHOSPHORBOARD_TASKS_TASK_H_ */
+#endif /* TIRTOS_TASK_H_ */
