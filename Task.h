@@ -11,6 +11,11 @@
 #include <ti/sysbios/knl/Task.h>
 #include <ti/sysbios/BIOS.h>
 
+
+static uint8_t stack[1024];
+static Task_Params params;
+static Task_Struct abstractTaskStruct;
+
 extern "C" {
   void abstractTaskFxn(UArg arg0, UArg arg1);
 }

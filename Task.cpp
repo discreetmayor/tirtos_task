@@ -12,13 +12,13 @@ void Task::create(int priority, int stackSize) {
 }
 
 void Task::create(int priority, int stackSize, UArg arg) {
-    Task_Params taskParams;
-    Task_Params_init(&taskParams);
-    taskParams.priority = priority;
-    taskParams.stackSize = stackSize;
-    taskParams.arg0 = (UArg)this;
-    taskParams.arg1 = arg;
-    Task_create((Task_FuncPtr)abstractTaskFxn, &taskParams, NULL);
+      Task_Params_init(&params);
+      params.arg0 = (UArg)this;
+      params.arg1 = arg;
+      params.stack = stack;
+      params.stackSize = stackSize;
+      params.priority = priority;
+      Task_construct(&abstractTaskStruct, abstractTaskFxn, &params, NULL);
 }
 
 extern "C" {
